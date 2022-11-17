@@ -1,0 +1,299 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-gray: gray;
+  --color-black: black;
+  --color-white: white;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.7rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  color: white;
+  height: 2000px;
+}
+
+/* modal project */
+/* modal styling */
+
+/* body {
+  background: url(../images/colin-watts--W1nKddY0bU-unsplash.jpg) no-repeat
+    center / cover;
+  height: 100vh;
+  position: relative;
+}
+
+.open__btn {
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  width: 350px;
+  height: 80px;
+  font-size: 2rem;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 0.5rem;
+  box-shadow: 0 0 3px black;
+  transition: 0.5s;
+}
+
+.open__btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.modal {
+  background-color: var(--color-white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 100px;
+  padding: 10px 2rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  animation: animatemodal 0.4s;
+}
+
+.close__btn {
+  font-size: 3rem;
+}
+
+.close__btn {
+  cursor: pointer;
+  font-size: 3rem;
+  color: #ff0000;
+}
+
+.modal__container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* modal animation */
+/* @keyframes animatemodal {
+  0% {
+    top: -300px;
+    opacity: 0;
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+  }
+} */
+
+/* menu toggle */
+
+.nav {
+  background: var(--color-black);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1.8rem 2rem;
+  transition: menu 0.3s;
+}
+
+.logo {
+  height: 20px;
+}
+.hamburger {
+  color: var(--color-white);
+  animation: iconchange 0.3s;
+}
+
+@keyframes iconchange {
+  0% {
+    display: block;
+  }
+
+  100% {
+    display: none;
+  }
+}
+
+.xmark {
+  color: white;
+  display: none;
+}
+
+.menu {
+  width: 100%;
+  margin-top: 2rem;
+  padding-left: 0;
+  display: none;
+  position: relative;
+  top: 0;
+  animation: slideanimation 0.5s;
+}
+
+@keyframes slideanimation {
+  0% {
+    top: -1000px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+.menu li {
+  list-style: none;
+  margin: 1.5rem;
+  border-bottom: 1px solid rgb(51, 51, 51);
+  padding-bottom: 1.5rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--color-white);
+  padding-bottom: 0.2rem;
+  transition: border-bottom 0.2s;
+}
+
+.menu a:hover {
+  color: lightgray;
+}
+
+.header {
+  background: black;
+  border: 2px solid black;
+  text-align: center;
+  padding: 3rem;
+}
+
+.header__width {
+  max-width: 1000px;
+  margin: 5rem auto;
+}
+
+.btn {
+  margin-top: 3rem;
+  padding: 1rem 2.5rem;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background: white;
+  color: rgb(46, 46, 46);
+}
+
+@media screen and (min-width: 800px) {
+  .nav {
+    border: 1px solid white;
+  }
+  .icons {
+    display: none;
+  }
+
+  .logo {
+    align-self: center;
+    margin-left: 3rem;
+  }
+
+  .menu {
+    display: flex;
+    width: fit-content;
+    border: 1px solid white;
+    justify-content: space-between;
+    align-self: center;
+    margin: 0;
+  }
+
+  .menu > li {
+    margin: 1rem 3rem;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+/* quote generator */
+/* body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: url(../images/microsoft-365-iDbvfTsgO8Y-unsplash.jpg);
+  background-position: center;
+  background-image: cover;
+}
+
+.container {
+  width: 550px;
+  height: 450px;
+}
+
+.header {
+  font-size: 1.2rem;
+  border: 2px solid white;
+  color: white;
+  background: #262626;
+  padding: 5px;
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+.main__content {
+  width: 100%;
+  height: fit-content;
+  background: white;
+  border-radius: 15px;
+  padding: 50px 40px;
+  box-shadow: 0 0 10px;
+}
+
+.main__content .text__area {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.main__content .person {
+  font-size: 1.6rem;
+  color: red;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.btn {
+  background: rgb(24, 24, 24);
+  color: white;
+  font-size: 1.3rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 2rem;
+}
+
+.btn:active {
+  background: lightblue;
+} */
